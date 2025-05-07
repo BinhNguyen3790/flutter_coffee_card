@@ -1,4 +1,5 @@
 import 'package:coffee_card/coffe-prefs.dart';
+import 'package:coffee_card/styled_text.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -21,14 +22,21 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.brown[200],
             padding: EdgeInsets.all(20),
-            child: Text("How I like my coffee..."),
+            child: StyledText("How I like my coffee..."),
           ),
           Container(
             color: Colors.brown[100],
             padding: EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text("Coffee prefs"), CoffeePrefs()],
+              children: [StyledText("Coffee prefs"), CoffeePrefs()],
+            ),
+          ),
+          Expanded(
+            child: Image.asset(
+              "assets/img/coffee_bg.jpg",
+              fit: BoxFit.fitWidth,
+              alignment: Alignment.bottomCenter,
             ),
           ),
         ],

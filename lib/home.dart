@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   const Home({super.key});
 
+  void handleOrder() {
+    print("handle Order");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +44,14 @@ class Home extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(50)),
+        ),
+        backgroundColor: Colors.brown[500],
+        onPressed: handleOrder,
+        child: Text("Order", style: TextStyle(color: Colors.white)),
       ),
     );
   }

@@ -42,8 +42,11 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
                   color: Colors.brown[50],
                   colorBlendMode: BlendMode.multiply,
                 ),
-              Expanded(child: SizedBox()),
-              StyledButton(onPressed: increaseStrength, child: Text("+")),
+              Expanded(child: SizedBox()),  
+              StyledButton(
+                onPressed: increaseStrength,
+                child: Icon(Icons.plus_one),
+              ),
             ],
           ),
           Row(
@@ -62,7 +65,10 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
                   colorBlendMode: BlendMode.multiply,
                 ),
               Expanded(child: SizedBox()),
-              StyledButton(onPressed: increaseSugar, child: Text("+")),
+              StyledButton(
+                onPressed: increaseSugar,
+                child: Icon(Icons.plus_one),
+              ),
             ],
           ),
         ],
